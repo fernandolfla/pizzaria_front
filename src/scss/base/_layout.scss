@@ -1,0 +1,16 @@
+body {
+  margin: initial;
+  background-color: color(bg);
+  font-family: font(primary);
+  color: font(cText);
+  a {
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+  }
+}
+
+.container {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0px auto;
+}
