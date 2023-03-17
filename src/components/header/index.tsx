@@ -1,6 +1,7 @@
 import { FaFacebookSquare, FaPhoneAlt } from 'react-icons/fa';
 import { IoLogoWhatsapp } from 'react-icons/io';
 import { AiFillInstagram } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 function Header(){
   return (
@@ -41,7 +42,7 @@ function Header(){
           <a href="#">
             <img src="" alt="" className="logo" />
           </a>
-          <a  href="#" className="btn btn--primary">Login</a>
+          <Link to="/login" className="btn btn--primary">Login</Link>
         </div>
       </div>
     </header>

@@ -1,0 +1,150 @@
+@import '../../scss/general.scss';
+
+.login {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  &__form { 
+    background-color: color(cWhite);
+    width: 520px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    margin: auto 20px auto auto;
+    border-right: 1px solid rgb(170, 170, 170);
+    border-left: 5px solid color(primary);
+    &__logo {
+      width: 30%;
+      height: auto;
+      margin: 10px auto 10px auto;
+    }
+    &__email {
+      margin: 10px auto 10px auto;
+      height: 30px;
+      width: 80%;
+      border: 1px solid  rgb(177, 174, 174);
+      &__input{
+        position: relative;
+        top: -6px;
+        height: 24px;
+        width: 100%;
+        outline: none;
+        border: none;
+        &::placeholder{
+          color: rgb(177, 174, 174);
+        }
+      }
+      &__text {
+        color: rgb(177, 174, 174);
+      }
+    }
+    &__password {
+      margin: 10px auto 10px auto;
+      height: 30px;
+      width: 80%;
+      border: 1px solid  rgb(177, 174, 174);
+      &__input{
+        position: relative;
+        top: -6px;
+        height: 24px;
+        width: 100%;
+        outline: none;
+        border: none;
+        &::placeholder{
+          color: rgb(177, 174, 174);
+        }
+      }
+      &__text {
+        color: rgb(177, 174, 174);
+      }
+    }
+    &__options {
+      display: flex;
+      justify-content: space-between;
+      margin: 5px 35px;
+      &__remember {
+        &__checkbox {
+          outline: none;
+          border: none;
+        }
+        &__label {
+          margin-left: 5px;
+          font-size: 14px;
+          color: rgb(124, 124, 124);
+        }
+      }
+      &__forgot {
+        font-size: 14px;
+        color: color(primary);
+        &:hover {
+          transition: .3s;
+          color: color(primary-hover);
+        }
+      }
+    }
+    &__button {
+      display: flex;
+      margin-top: 30px;
+      margin-bottom: 70px;
+      justify-content: center;
+      &__submit {
+        width: 90%;
+        height: 50px;
+        background: color(primary);
+        border: none;
+        color: color(cWhite);
+        font-size: 16px;
+        font-weight: bold;
+        &:hover {
+          transition: .3s;
+          background: color(primary-hover);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  &__help {
+    display: flex;
+    background-color: #C5C7CD;
+    width: 520px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    margin: auto auto auto 0px;
+    &__content {
+      margin: auto;
+      &__text, &__number  {
+        font-size: 24px;
+      }
+      &__number {
+        position: relative;
+        top: -20px;
+        font-weight: bold;
+      }
+      &__social{
+        &__text{
+          font-size: 14px;
+          color: color(primary);
+        }
+        &__icons{
+          display: flex;
+          margin-top: 20px;
+          &__content{
+            background: color(primary);
+            margin: 3px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &__icon {
+              font-size: 20px;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -3,6 +3,8 @@ import { IoLogoWhatsapp, IoLogoInstagram } from 'react-icons/io';
 import Hero from "../../assets/home/hero.png";
 import Like from "../../assets/icons/like.svg";
 import Promo from "../../components/promo";
+import Header from '../../components/header';
+import Footer from '../../components/footer';
 
 const promos = [
   {
@@ -32,76 +34,80 @@ const renderMap = () =>{
     
  }
 
-function App() {
+function Home() {
   return (
-    <main className="home">
-      <section className="hero">
-        <div className="container">
-          <div className="hero__wrapper">
-            <div className="hero__content">
-              <h1>A melhor <span>pizza</span> da cidade, entregue na sua porta</h1>
-              <p>Sabor, qualidade e rapidez: nossa pizzaria tem tudo o que você precisa para uma noite perfeita!</p>
-              <a href="#" className="btn btn--green btn--iconed">
-                <IoLogoWhatsapp />
-                pedir pelo whatsapp
-              </a>
-            </div>
-            <figure>
-              <img src={Hero} alt="" />
-            </figure>
-          </div>
-        </div>
-      </section>
-      <section className="home-grid">
-        <div className="container">
-          <div className="home-grid__wrapper">
-            <div className="home-grid__title">
-              <h3>pediu, chegou</h3>
-              <h2>Entrega rápida, Pizza quentinha!</h2>
-              <p>confira algumas de nossas promoções, feitas para você:</p>
-            </div>
-            <div className="home-grid__content">
-              {renderPromos()}
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="home-map">
-        <div className="home-map__wrapper">
-          {renderMap()}
-          <div className="home-map__content">
-            <h3>ONDE ESTAMOS</h3>
-            <h2>Sabor que chega até você!</h2>
-            <p>R. Ataláia, 1505 - Guaraituba, Colombo - PR, 83410-100</p>
-            <a href="#" className="btn btn--red">(41) 3621-6288</a>
-          </div>
-        </div>
-      </section>
-      
-      <section className="instagram">
-        <div className="container container--small">
-          <div className="instagram-content">
-            <div className="instagram-content__wrapper">
-              <div>
-                <h3>instagram</h3>
-                <h2>Fique por dentro das novidades e promoções exclusivas</h2>
+    <>
+    <Header />
+      <main className="home">
+        <section className="hero">
+          <div className="container">
+            <div className="hero__wrapper">
+              <div className="hero__content">
+                <h1>A melhor <span>pizza</span> da cidade, entregue na sua porta</h1>
+                <p>Sabor, qualidade e rapidez: nossa pizzaria tem tudo o que você precisa para uma noite perfeita!</p>
+                <a href="#" className="btn btn--green btn--iconed">
+                  <IoLogoWhatsapp />
+                  pedir pelo whatsapp
+                </a>
               </div>
               <figure>
-                <img src={Like} alt="Ilustração de coração: simbolizando gostei" />
+                <img src={Hero} alt="" />
               </figure>
             </div>
-            <div className="instagram__link">
-              <span><IoLogoInstagram/></span>
-                <a href="https://www.instagram.com/don_roberto_pizzaria/" target="_blank" rel="noreferrer">@don_roberto_pizzaria</a>
-            </div>
-            <div className="instagram__grid">
-              <figure><img src="" alt="" /></figure>
+          </div>
+        </section>
+        <section className="home-grid">
+          <div className="container">
+            <div className="home-grid__wrapper">
+              <div className="home-grid__title">
+                <h3>pediu, chegou</h3>
+                <h2>Entrega rápida, Pizza quentinha!</h2>
+                <p>confira algumas de nossas promoções, feitas para você:</p>
+              </div>
+              <div className="home-grid__content">
+                {renderPromos()}
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-    </main>
+        </section>
+        <section className="home-map">
+          <div className="home-map__wrapper">
+            {renderMap()}
+            <div className="home-map__content">
+              <h3>ONDE ESTAMOS</h3>
+              <h2>Sabor que chega até você!</h2>
+              <p>R. Ataláia, 1505 - Guaraituba, Colombo - PR, 83410-100</p>
+              <a href="#" className="btn btn--red">(41) 3621-6288</a>
+            </div>
+          </div>
+        </section>
+        
+        <section className="instagram">
+          <div className="container container--small">
+            <div className="instagram-content">
+              <div className="instagram-content__wrapper">
+                <div>
+                  <h3>instagram</h3>
+                  <h2>Fique por dentro das novidades e promoções exclusivas</h2>
+                </div>
+                <figure>
+                  <img src={Like} alt="Ilustração de coração: simbolizando gostei" />
+                </figure>
+              </div>
+              <div className="instagram__link">
+                <span><IoLogoInstagram/></span>
+                  <a href="https://www.instagram.com/don_roberto_pizzaria/" target="_blank" rel="noreferrer">@don_roberto_pizzaria</a>
+              </div>
+              <div className="instagram__grid">
+                <figure><img src="" alt="" /></figure>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    <Footer />
+    </>
   );
 }
 
-export default App;
+export default Home;
