@@ -2,13 +2,13 @@
 
 .login {
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 16px);
   display: grid;
   grid-template-columns: 50% 50%;
   &__form { 
     background-color: color(cWhite);
-    width: 520px;
-    height: 500px;
+    width: 480px;
+    height: 450px;
     display: flex;
     flex-direction: column;
     margin: auto 20px auto auto;
@@ -19,44 +19,47 @@
       height: auto;
       margin: 10px auto 10px auto;
     }
-    &__email {
+    &__content {
       margin: 10px auto 10px auto;
       height: 30px;
       width: 80%;
       border: 1px solid  rgb(177, 174, 174);
-      &__input{
+      &__invalid {
+        margin: 10px auto 10px auto;
+        height: 30px;
+        width: 80%;
+        border: 1px solid  color(primary-hover);
+      }
+      &__input {
         position: relative;
         top: -6px;
         height: 24px;
         width: 100%;
         outline: none;
         border: none;
-        &::placeholder{
+        &::placeholder {
           color: rgb(177, 174, 174);
+        }
+        &__password {
+          position: relative;
+          top: -6px;
+          height: 24px;
+          width: 100%;
+          outline: none;
+          border: none;
+          &::placeholder {
+            color: rgb(177, 174, 174);
+          }
+          &:hover {
+            cursor: pointer;
+          }
         }
       }
       &__text {
         color: rgb(177, 174, 174);
-      }
-    }
-    &__password {
-      margin: 10px auto 10px auto;
-      height: 30px;
-      width: 80%;
-      border: 1px solid  rgb(177, 174, 174);
-      &__input{
-        position: relative;
-        top: -6px;
-        height: 24px;
-        width: 100%;
-        outline: none;
-        border: none;
-        &::placeholder{
-          color: rgb(177, 174, 174);
+        &__invalid {
+          color: color(primary-hover)
         }
-      }
-      &__text {
-        color: rgb(177, 174, 174);
       }
     }
     &__options {
@@ -65,13 +68,27 @@
       margin: 5px 35px;
       &__remember {
         &__checkbox {
-          outline: none;
-          border: none;
-        }
-        &__label {
-          margin-left: 5px;
-          font-size: 14px;
-          color: rgb(124, 124, 124);
+          display: flex;
+          margin: 0px 5px;
+          &__content {
+            width: 20px;
+            height: 20px;
+            outline: 1px rgb(177, 174, 174) solid;
+            &:hover {
+              cursor: pointer;
+            }
+            &__icon {
+              position: relative;
+              bottom: 5px;
+              left: 2px;
+              font-size: 24px;
+            }
+          }
+          &__label {
+            margin-left: 10px;
+            font-size: 14px;
+            color: rgb(124, 124, 124);
+          }
         }
       }
       &__forgot {
@@ -107,8 +124,8 @@
   &__help {
     display: flex;
     background-color: #C5C7CD;
-    width: 520px;
-    height: 500px;
+    width: 480px;
+    height: 450px;
     display: flex;
     flex-direction: column;
     margin: auto auto auto 0px;
@@ -130,7 +147,7 @@
         &__icons{
           display: flex;
           margin-top: 20px;
-          &__content{
+          &__content {
             background: color(primary);
             margin: 3px;
             width: 40px;
@@ -138,6 +155,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            &:hover {
+              transition: .3s;
+              cursor: pointer;
+              background: color(primary-hover);
+            }
             &__icon {
               font-size: 20px;
               color: white;
