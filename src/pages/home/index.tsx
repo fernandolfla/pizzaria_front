@@ -28,7 +28,7 @@ const renderPromos = () => {
 }
 
 const renderMap = () =>{
-    return <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3605.410959451274!2d-49.157066748942256!3d-25.35753978374243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce924802945a9%3A0x66c703e755fd53d5!2sR.%20Atal%C3%A1ia%2C%201505%20-%20Guaraituba%2C%20Colombo%20-%20PR%2C%2083410-100!5e0!3m2!1spt-BR!2sbr!4v1678902591242!5m2!1spt-BR!2sbr" loading="lazy"></iframe>
+    return <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3605.410959451274!2d-49.157066748942256!3d-25.35753978374243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce924802945a9%3A0x66c703e755fd53d5!2sR.%20Atal%C3%A1ia%2C%201505%20-%20Guaraituba%2C%20Colombo%20-%20PR%2C%2083410-100!5e0!3m2!1spt-BR!2sbr!4v1678902591242!5m2!1spt-BR!2sbr" title="Mapa" loading="lazy"></iframe>
     
  }
 
@@ -41,7 +41,7 @@ function App() {
             <div className="hero__content">
               <h1>A melhor <span>pizza</span> da cidade, entregue na sua porta</h1>
               <p>Sabor, qualidade e rapidez: nossa pizzaria tem tudo o que você precisa para uma noite perfeita!</p>
-              <a href="#" className="btn btn--green btn--iconed">
+              <a href="https://web.whatsapp.com/send?phone=5541991549910&text=" className="btn btn--green btn--iconed" target='_blank'>
                 <IoLogoWhatsapp />
                 pedir pelo whatsapp
               </a>
@@ -73,7 +73,7 @@ function App() {
             <h3>ONDE ESTAMOS</h3>
             <h2>Sabor que chega até você!</h2>
             <p>R. Ataláia, 1505 - Guaraituba, Colombo - PR, 83410-100</p>
-            <a href="#" className="btn btn--red">(41) 3621-6288</a>
+            <a href="#" className="btn btn--red">(41) 3621-6288</a> {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
           </div>
         </div>
       </section>

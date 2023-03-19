@@ -28,7 +28,7 @@ function Header(){
                 </a>
               </li>
               <li>
-                <a href="#" target="_blank">
+                <a href="https://web.whatsapp.com/send?phone=5541991549910&text=" target="_blank">
                   <IoLogoWhatsapp />
                 </a>
               </li>
@@ -38,10 +38,10 @@ function Header(){
       </section>
       <div className="container">
         <div className="header__wrapper">
-          <a href="#">
+          <a href="#"> {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <img src="" alt="" className="logo" />
           </a>
-          <a  href="#" className="btn btn--primary">Login</a>
+          <a  href="#" className="btn btn--primary">Login</a> {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
         </div>
       </div>
     </header>
