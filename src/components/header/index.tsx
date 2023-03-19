@@ -38,10 +38,10 @@ function Header(){
       </section>
       <div className="container">
         <div className="header__wrapper">
-          <a href="javascript:window.location.reload(true)"> 
+          <a href="#section"> 
             <img src="" alt="" className="logo" />
           </a>
-          <a  href="javascript:window.location.reload(true)" className="btn btn--primary">Login</a>
+          <a  href="#section" className="btn btn--primary">Login</a>
         </div>
       </div>
     </header>
