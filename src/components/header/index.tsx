@@ -28,7 +28,7 @@ function Header(){
                 </a>
               </li>
               <li>
-                <a href="https://web.whatsapp.com/send?phone=5541991549910&text=" target="_blank">
+                <a href="https://web.whatsapp.com/send?phone=5541991549910&text=" target="_blank" rel="noreferrer">
                   <IoLogoWhatsapp />
                 </a>
               </li>
