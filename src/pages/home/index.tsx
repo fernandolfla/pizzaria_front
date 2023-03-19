@@ -41,7 +41,7 @@ function App() {
             <div className="hero__content">
               <h1>A melhor <span>pizza</span> da cidade, entregue na sua porta</h1>
               <p>Sabor, qualidade e rapidez: nossa pizzaria tem tudo o que você precisa para uma noite perfeita!</p>
-              <a href="https://web.whatsapp.com/send?phone=5541991549910&text=" className="btn btn--green btn--iconed" target='_blank'>
+              <a href="https://web.whatsapp.com/send?phone=5541991549910&text=" className="btn btn--green btn--iconed" target='_blank' rel="noreferrer">
                 <IoLogoWhatsapp />
                 pedir pelo whatsapp
               </a>

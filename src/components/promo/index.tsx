@@ -20,7 +20,7 @@ function Promo({ name, qty, description }:PromoProps){
             <p>{description}</p>
           </div>
         </div>
-        <a href="https://web.whatsapp.com/send?phone=5541991549910&text=" className="btn btn--buy btn--green btn--iconed" target="_blank"> 
+        <a href="https://web.whatsapp.com/send?phone=5541991549910&text=" className="btn btn--buy btn--green btn--iconed" target="_blank" rel="noreferrer"> 
           <IoLogoWhatsapp/>
           pedir
         </a>
