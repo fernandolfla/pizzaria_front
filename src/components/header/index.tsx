@@ -38,10 +38,10 @@ function Header(){
       </section>
       <div className="container">
         <div className="header__wrapper">
-          <a href="#"> {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+          <a href="javascript:window.location.reload(true)"> 
             <img src="" alt="" className="logo" />
           </a>
-          <a  href="#" className="btn btn--primary">Login</a> {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+          <a  href="javascript:window.location.reload(true)" className="btn btn--primary">Login</a>
         </div>
       </div>
     </header>

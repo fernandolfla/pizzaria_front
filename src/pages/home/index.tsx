@@ -73,7 +73,7 @@ function App() {
             <h3>ONDE ESTAMOS</h3>
             <h2>Sabor que chega até você!</h2>
             <p>R. Ataláia, 1505 - Guaraituba, Colombo - PR, 83410-100</p>
-            <a href="#" className="btn btn--red">(41) 3621-6288</a> {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+            <a href="javascript:window.location.reload(true)" className="btn btn--red">(41) 3621-6288</a>
           </div>
         </div>
       </section>
