@@ -2,8 +2,8 @@ name: Deploy front
 
 on:
   push:
-    branches: [ Develop ]
-
+    branches:
+      - develop
 jobs:
   build:
     runs-on: ubuntu-latest
