@@ -1,7 +1,7 @@
 import "./login.scss"
 import Logo from "../../assets/home/logo.jpeg";
 import { FaFacebookF, FaTwitter, FaWhatsapp } from 'react-icons/fa';
-import { VscCheck } from 'react-icons/vsc'
+import { VscCheck, VscEye, VscEyeClosed } from 'react-icons/vsc'
 import useLogin from './hook/useLogin';
 import FooterAuth from "../../components/footer/auth";
 
@@ -19,7 +19,8 @@ function Login() {
     login,
     error,
     visible,
-    setVisible,} = useLogin();
+    setVisible,
+    selectRememberPassword} = useLogin();
 
   return (
     <>
@@ -43,7 +44,8 @@ function Login() {
               placeholder="Login"
               onKeyDown={(e) => {handleKeyPress(e)}}
               onChange={(e) => setEmail(e.target.value)}
-              value={email}/>
+              value={email}
+              tabIndex={1}/>
           </fieldset>
           <fieldset 
           className={error === "login"? 
@@ -54,17 +56,36 @@ function Login() {
               "login__form__content__text__invalid":
               "login__form__content__text"}>senha</legend>
             <input 
-              type={visible ? "password" : "text"} 
+              type={!visible ? "password" : "text"} 
               className="login__form__content__input__password"
               placeholder="Senha"
               onKeyDown={(e) => handleKeyPress(e)}
               onChange={(e) => setPassword(e.target.value)}
-              onMouseDown={() => setVisible(!visible)}
-              value={password}/>
+              value={password}
+              tabIndex={2}/>
+            <div 
+            className="login__form__content__input__password__icon 
+                      login__form__content__invalid__input__password__icon">
+              <div hidden={!visible}>
+                <VscEye 
+                  className="login__form__content__input__password__icon__content
+                              login__form__content__invalid__input__password__icon__content"
+                  onClick={() => setVisible(!visible)}/>
+              </div>
+              <div  hidden={visible}>
+                <VscEyeClosed 
+                  className="login__form__content__input__password__icon__content
+                              login__form__content__invalid__input__password__icon__content"
+                  onClick={() => setVisible(!visible)}/>
+              </div>
+            </div>
           </fieldset>
           <div className="login__form__options">
             <div className="login__form__options__remember">
-              <div className="login__form__options__remember__checkbox">
+              <div 
+                className="login__form__options__remember__checkbox" 
+                tabIndex={3}
+                onKeyDown={(e) => selectRememberPassword(e)}>
                 <div 
                   className="login__form__options__remember__checkbox__content" 
                   onClick={() => setChecked(!checked)}>
@@ -75,10 +96,10 @@ function Login() {
                 <label className="login__form__options__remember__checkbox__label">Lembrar Senha</label>
               </div>
             </div>
-            <a href="#" className="login__form__options__forgot">esqueci minha senha</a>
+            <a href="#" className="login__form__options__forgot" tabIndex={4}>esqueci minha senha</a>
           </div>
           <div className="login__form__button">
-            <button className="login__form__button__submit" >Entrar</button>
+            <button className="login__form__button__submit" tabIndex={5}>Entrar</button>
           </div>
         </form>
         <div className="login__help">
@@ -100,7 +121,7 @@ function Login() {
                 </div>
                 <div 
                     className="login__help__content__social__icons__content" 
-                    onClick={() => redirect("https://www.facebook.com/pages/Don-Roberto-Pizzaria-E-Chopperia/1578189905770892")}>
+                    onClick={() => redirect("https://wa.me/554130303030")}>
                   <FaWhatsapp className="login__help__content__social__icons__content__icon"/>
                 </div>
               </div>

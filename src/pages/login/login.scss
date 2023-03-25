@@ -11,7 +11,7 @@
     height: 450px;
     display: flex;
     flex-direction: column;
-    margin: auto 20px auto auto;
+    margin: auto 2.5px auto auto;
     border-right: 1px solid rgb(170, 170, 170);
     border-left: 5px solid color(primary);
     &__logo {
@@ -24,13 +24,15 @@
       height: 30px;
       width: 80%;
       border: 1px solid  rgb(177, 174, 174);
+      display: flex;
       &__invalid {
+        display: flex;
         margin: 10px auto 10px auto;
         height: 30px;
         width: 80%;
         border: 1px solid  color(primary-hover);
       }
-      &__input {
+      &__input , &__invalid__input {
         position: relative;
         top: -6px;
         height: 24px;
@@ -50,8 +52,20 @@
           &::placeholder {
             color: rgb(177, 174, 174);
           }
-          &:hover {
-            cursor: pointer;
+          &__icon{
+            display: flex;
+            position: relative;
+            top: -4px;
+            align-items: center;
+            height: 24px;
+            &__content {
+              margin: auto;
+              font-size: 16px;
+              &:hover {
+                cursor: pointer;
+                scale: 1.2;
+              }
+            }
           }
         }
       }
@@ -128,7 +142,7 @@
     height: 450px;
     display: flex;
     flex-direction: column;
-    margin: auto auto auto 0px;
+    margin: auto auto auto 2.5px;
     &__content {
       margin: auto;
       &__text, &__number  {

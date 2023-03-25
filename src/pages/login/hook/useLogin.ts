@@ -1,5 +1,6 @@
 import { useState, useContext } from "react";
 import AppContext from "../../../contexts/AppContext";
+import LoginType from "../../../types/LoginType";
 import loginService from "../service/loginService";
 
 function useLogin() {
@@ -27,18 +28,28 @@ function useLogin() {
     }
   }
 
-  function login() {
-    const result = loginService.login(email, password);
-    if (!result) {
-      setMessageAlert("email ou senha inválidos");
+  function selectRememberPassword(e: any) {
+    if (e.keyCode === 13) setChecked(!checked);
+  }
+
+  async function login() {
+    const login: LoginType = {
+      email: email,
+      senha: password,
+    };
+    const data = await loginService.login(login);
+    if (data.error) {
+      setMessageAlert(data.error);
       setColorAlert("red");
       setOpenAlert(true);
       setError("login");
       // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       timeAlert;
     } else {
-      setPassword("");
       setEmail("");
+      setPassword("");
+      if (checked) localStorage.setItem("remember", "true");
+      localStorage.setItem("token", data.token as string);
     }
   }
 
@@ -55,6 +66,7 @@ function useLogin() {
     error,
     visible,
     setVisible,
+    selectRememberPassword,
   };
 }
 
