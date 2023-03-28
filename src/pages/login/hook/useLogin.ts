@@ -16,6 +16,7 @@ function useLogin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [visible, setVisible] = useState(false);
+  const service = new loginService();
 
   function redirect(to: string) {
     window.open(to, "_blank");
@@ -37,7 +38,7 @@ function useLogin() {
       email: email,
       senha: password,
     };
-    const data = await loginService.login(login);
+    const data = await service.login(login);
     if (data.error) {
       setMessageAlert(data.error);
       setColorAlert("red");
