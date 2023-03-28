@@ -1,0 +1,186 @@
+@import '../../scss/general.scss';
+
+.login {
+  width: 100vw;
+  height: calc(100vh - 16px);
+  display: grid;
+  grid-template-columns: 50% 50%;
+  &__form { 
+    background-color: color(cWhite);
+    width: 480px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    margin: auto 2.5px auto auto;
+    border-right: 1px solid rgb(170, 170, 170);
+    border-left: 5px solid color(primary);
+    &__logo {
+      width: 30%;
+      height: auto;
+      margin: 10px auto 10px auto;
+    }
+    &__content {
+      margin: 10px auto 10px auto;
+      height: 30px;
+      width: 80%;
+      border: 1px solid  rgb(177, 174, 174);
+      display: flex;
+      &__invalid {
+        display: flex;
+        margin: 10px auto 10px auto;
+        height: 30px;
+        width: 80%;
+        border: 1px solid  color(primary-hover);
+      }
+      &__input , &__invalid__input {
+        position: relative;
+        top: -6px;
+        height: 24px;
+        width: 100%;
+        outline: none;
+        border: none;
+        &::placeholder {
+          color: rgb(177, 174, 174);
+        }
+        &__password {
+          position: relative;
+          top: -6px;
+          height: 24px;
+          width: 100%;
+          outline: none;
+          border: none;
+          &::placeholder {
+            color: rgb(177, 174, 174);
+          }
+          &__icon{
+            display: flex;
+            position: relative;
+            top: -4px;
+            align-items: center;
+            height: 24px;
+            &__content {
+              margin: auto;
+              font-size: 16px;
+              &:hover {
+                cursor: pointer;
+                scale: 1.2;
+              }
+            }
+          }
+        }
+      }
+      &__text {
+        color: rgb(177, 174, 174);
+        &__invalid {
+          color: color(primary-hover)
+        }
+      }
+    }
+    &__options {
+      display: flex;
+      justify-content: space-between;
+      margin: 5px 35px;
+      &__remember {
+        &__checkbox {
+          display: flex;
+          margin: 0px 5px;
+          &__content {
+            width: 20px;
+            height: 20px;
+            outline: 1px rgb(177, 174, 174) solid;
+            &:hover {
+              cursor: pointer;
+            }
+            &__icon {
+              position: relative;
+              bottom: 5px;
+              left: 2px;
+              font-size: 24px;
+            }
+          }
+          &__label {
+            margin-left: 10px;
+            font-size: 14px;
+            color: rgb(124, 124, 124);
+          }
+        }
+      }
+      &__forgot {
+        font-size: 14px;
+        color: color(primary);
+        &:hover {
+          transition: .3s;
+          color: color(primary-hover);
+        }
+      }
+    }
+    &__button {
+      display: flex;
+      margin-top: 30px;
+      margin-bottom: 70px;
+      justify-content: center;
+      &__submit {
+        width: 90%;
+        height: 50px;
+        background: color(primary);
+        border: none;
+        color: color(cWhite);
+        font-size: 16px;
+        font-weight: bold;
+        &:hover {
+          transition: .3s;
+          background: color(primary-hover);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  &__help {
+    display: flex;
+    background-color: #C5C7CD;
+    width: 480px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    margin: auto auto auto 2.5px;
+    &__content {
+      margin: auto;
+      &__text, &__number  {
+        font-size: 24px;
+      }
+      &__number {
+        position: relative;
+        top: -20px;
+        font-weight: bold;
+      }
+      &__social{
+        &__text{
+          font-size: 14px;
+          color: color(primary);
+        }
+        &__icons{
+          display: flex;
+          margin-top: 20px;
+          &__content {
+            background: color(primary);
+            margin: 3px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:hover {
+              transition: .3s;
+              cursor: pointer;
+              background: color(primary-hover);
+            }
+            &__icon {
+              font-size: 20px;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
