@@ -2,8 +2,10 @@ name: Deploy front
 
 on:
   push:
-    branches: [ develop ]
-
+    branches:
+      - develop
+env: 
+  REACT_APP_API: https://apidev.donroberto.com.br/
 jobs:
   build:
     runs-on: ubuntu-latest
