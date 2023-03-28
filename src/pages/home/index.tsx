@@ -45,7 +45,7 @@ function Home() {
               <div className="hero__content">
                 <h1>A melhor <span>pizza</span> da cidade, entregue na sua porta</h1>
                 <p>Sabor, qualidade e rapidez: nossa pizzaria tem tudo o que você precisa para uma noite perfeita!</p>
-                <a href="#" className="btn btn--green btn--iconed">
+                <a href="#section" className="btn btn--green btn--iconed">
                   <IoLogoWhatsapp />
                   pedir pelo whatsapp
                 </a>
@@ -77,7 +77,7 @@ function Home() {
               <h3>ONDE ESTAMOS</h3>
               <h2>Sabor que chega até você!</h2>
               <p>R. Ataláia, 1505 - Guaraituba, Colombo - PR, 83410-100</p>
-              <a href="#" className="btn btn--red">(41) 3621-6288</a>
+              <a href="#section" className="btn btn--red">(41) 3621-6288</a>
             </div>
           </div>
         </section>
