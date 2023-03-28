@@ -2,7 +2,7 @@ import api from "../../../api/api";
 import LoginType from "../../../types/LoginType";
 import LoginResponseType from "../../../types/LoginResponseType";
 
-class loginService {
+export default class loginService {
   async login(login: LoginType) {
     const data: LoginResponseType = {
       email: undefined,
@@ -28,5 +28,3 @@ class loginService {
     return data;
   }
 }
-
-export default new loginService();

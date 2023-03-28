@@ -96,7 +96,7 @@ function Login() {
                 <label className="login__form__options__remember__checkbox__label">Lembrar Senha</label>
               </div>
             </div>
-            <a href="#" className="login__form__options__forgot" tabIndex={4}>esqueci minha senha</a>
+            <a href="#section" className="login__form__options__forgot" tabIndex={4}>esqueci minha senha</a>
           </div>
           <div className="login__form__button">
             <button className="login__form__button__submit" tabIndex={5}>Entrar</button>
