@@ -39,7 +39,7 @@ function Header(){
       <div className="container">
         <div className="header__wrapper">
           <a href="#">
-            <img src="" alt="" className="logo" />
+            <img src="/logo-black.png" alt="" className="logo" />
           </a>
           <a  href="#" className="btn btn--primary">Login</a>
         </div>

@@ -59,6 +59,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 16px;
+  }
+  .logo {
+    max-height: 90px;
   }
 }
 
@@ -66,6 +70,9 @@
   background-color: color(primary);
   text-align: center;
   padding: 20px 0;
+  .logo {
+    max-height: 60px;
+  }
 }
 .hero {
   &__wrapper {
@@ -145,7 +152,7 @@
   position: relative;
   z-index: 2;
   margin-top: 51px;
-  padding: 88px 0;
+  padding: 110px 0 80px;
   &::before,
   &::after {
     content: '';

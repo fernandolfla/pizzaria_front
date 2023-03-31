@@ -1,7 +1,7 @@
 function Footer(){
   return (
     <footer className="footer">
-      LOGO
+      <img src="/logo-white.png" alt="" className="logo" />
     </footer>
   )
 }
