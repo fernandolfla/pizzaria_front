@@ -1,6 +1,6 @@
 import "./login.scss"
 import Logo from "../../assets/home/logo.jpeg";
-import { FaFacebookF, FaTwitter, FaWhatsapp } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import { VscCheck, VscEye, VscEyeClosed } from 'react-icons/vsc'
 import useLogin from './hook/useLogin';
 import FooterAuth from "../../components/footer/auth";
@@ -39,7 +39,7 @@ function Login() {
               "login__form__content__text__invalid":
               "login__form__content__text"}>login</legend>
             <input 
-              type="email" 
+              type="Informe o Login" 
               className="login__form__content__input" 
               placeholder="Login"
               onKeyDown={(e) => {handleKeyPress(e)}}
@@ -58,7 +58,7 @@ function Login() {
             <input 
               type={!visible ? "password" : "text"} 
               className="login__form__content__input__password"
-              placeholder="Senha"
+              placeholder="Informe a Senha"
               onKeyDown={(e) => handleKeyPress(e)}
               onChange={(e) => setPassword(e.target.value)}
               value={password}
@@ -105,7 +105,7 @@ function Login() {
         <div className="login__help">
           <div className="login__help__content">
             <p className="login__help__content__text">PRECISA DE AJUDA ?</p><br />
-            <p className="login__help__content__number">+55 (41) 3030.3030</p>
+            <p className="login__help__content__number">+55 (41) 3621-6288</p>
             <div className="login__help__content__social">
               <p className="login__help__content__social__text">Siga-nos nas redes sociais</p>
               <div className="login__help__content__social__icons">
@@ -116,12 +116,12 @@ function Login() {
                 </div>
                 <div 
                   className="login__help__content__social__icons__content"
-                  onClick={() => redirect("https://www.facebook.com/pages/Don-Roberto-Pizzaria-E-Chopperia/1578189905770892")}>
-                  <FaTwitter className="login__help__content__social__icons__content__icon"/>
+                  onClick={() => redirect("https://www.instagram.com/don_roberto_pizzaria/")}>
+                  <FaInstagram className="login__help__content__social__icons__content__icon"/>
                 </div>
                 <div 
                     className="login__help__content__social__icons__content" 
-                    onClick={() => redirect("https://wa.me/554130303030")}>
+                    onClick={() => redirect("https://web.whatsapp.com/send?phone=5541991549910&text=")}>
                   <FaWhatsapp className="login__help__content__social__icons__content__icon"/>
                 </div>
               </div>
